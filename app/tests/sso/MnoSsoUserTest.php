@@ -87,15 +87,7 @@ CERTIFICATE;
     {
     }
     
-    public function testFunctionCreateLocalUserWhenAppOwner()
-    {
-    }
-    
-    public function testFunctionCreateLocalUserWhenOrgaAdmin()
-    {
-    }
-    
-    public function testFunctionCreateLocalUserWhenNormal()
+    public function testFunctionCreateLocalUser()
     {
     }
     
