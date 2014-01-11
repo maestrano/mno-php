@@ -39,7 +39,7 @@ class MnoSsoUser extends MnoSsoBaseUser
    */
   // protected function setInSession()
   // {
-  //   // First set $conn variable (used internally by collabtive methods)
+  //   // First set $conn variable (need global variable?)
   //   $conn = $this->connection;
   //   
   //   $sel1 = $conn->query("SELECT ID,name,lastlogin FROM user WHERE ID = $this->local_id");
@@ -74,7 +74,7 @@ class MnoSsoUser extends MnoSsoBaseUser
   //   $lid = null;
   //   
   //   if ($this->accessScope() == 'private') {
-  //     // First set $conn variable (used internally by collabtive methods)
+  //     // First set $conn variable (need global variable?)
   //     $conn = $this->connection;
   //     
   //     // Create user
