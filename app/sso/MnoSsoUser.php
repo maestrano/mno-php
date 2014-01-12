@@ -20,13 +20,13 @@ class MnoSsoUser extends MnoSsoBaseUser
    *   A SamlResponse object from Maestrano containing details
    *   about the user being authenticated
    */
-  public function __construct(OneLogin_Saml_Response $saml_response, &$session = array(), $db_connection = null)
+  public function __construct(OneLogin_Saml_Response $saml_response, &$session = array(), $opts = array())
   {
     // Call Parent
     parent::__construct($saml_response,$session);
     
     // Assign new attributes
-    $this->connection = $db_connection;
+    $this->connection = $opts['db_connection'];
   }
   
   

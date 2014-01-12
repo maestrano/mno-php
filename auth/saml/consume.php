@@ -16,9 +16,9 @@ require '../../app/init/auth.php';
 
 session_start();
 
-// Database Connection variable
-if (!isset($conn)) {
-  $conn = null;
+// Options variable
+if (!isset($opts)) {
+  $opts = array();
 }
 
 // Check where we should redirect the user
@@ -34,7 +34,7 @@ try {
     if ($samlResponse->isValid()) {
         
         // Get Maestrano User
-        $sso_user = new MnoSsoUser($samlResponse, $_SESSION, $conn);
+        $sso_user = new MnoSsoUser($samlResponse, $_SESSION, $opts);
         
         // Try to match the user with a local one
         $sso_user->matchLocal();

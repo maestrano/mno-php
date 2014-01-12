@@ -20,12 +20,16 @@ require MAESTRANO_ROOT . '/app/init/_config_loader.php'; //set $mno_settings var
 //-----------------------------------------------
 // Perform your custom preparation code
 //-----------------------------------------------
-// If you define the $conn variable then it will
+// If you define the $opts variable then it will
 // automatically be passed to the MnoSsoUser object
-// as a database connection object
+// for construction
+// e.g:
+// $opts = array();
 // if (!empty($db_name) and !empty($db_user)) {
 //     $conn = new PDO("mysql:host=$db_host;dbname=$db_name;charset=utf8", $db_user, $db_pass);
 //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+//     
+//     $opts['db_connection'] = $conn;
 // }
 
 
